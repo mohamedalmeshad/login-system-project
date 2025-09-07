@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sign Up</title>
+
+        <!-- bootstrap styling -->
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <!-- main styling -->
+        <link rel="stylesheet" href="css/style.css" />
+        <!-- media styling -->
+        <link rel="stylesheet" href="css/media.css" />
+    </head>
+
+    <body>
+        <main>
+            <!-- Sign up page -->
+            <section id="signupPage" class="vh-100">
+                <div class="container-fluid w-100 h-100">
+                    <div class="d-flex justify-content-center align-items-center w-100 h-100">
+                        <div class="signup-content text-center w-50">
+                            <div class="signup-header">
+                                <h2>Sign Up</h2>
+                                <p>Create your account to get started</p>
+                            </div>
+                            <form action="" class="py-3">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="userNameSignup" placeholder="Your Name">
+                                    <p class="invalid-message d-none">Name must be at least 3 letters</p>
+                                    <label for="userNameSignup">Name</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control" id="userEmailSignup" placeholder="name@example.com">
+                                    <p class="invalid-message d-none">Please enter a valid email address (e.g. user@example.com).</p>
+                                    <label for="userEmailSignup">Email address</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="password" class="form-control" id="userPasswordSignup" placeholder="Password">
+                                    <p class="invalid-message d-none">Password must be 6+ chars with letters & numbers.</p>
+                                    <label for="userPasswordSignup">Password</label>
+                                </div>
+                                <div id="successMessage" class="mb-3 text-success d-none">Success</div>
+                                <div id="existUserMessage" class="mb-3 text-warning d-none">Email already exists. Try another one.</div>
+                                <button type="submit" class="btn btn-violet w-100" id="signupBtn">Sign Up</button>
+                                </form>
+                            <div class="signin-link">
+                                <p>You have an account? <a href="login.html">Sign In</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End sign up page -->
+        </main>
+
+        <!-- bootstrap js -->
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <!-- main js -->
+        <script src="js/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,145 @@
+/* ============ Global Styles ============ */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+a, button {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ============ Navbar ============ */
+#navBar {
+    background-color: #fff;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+.nav-content h2 {
+    font-size: 20px;
+    margin: 0;
+}
+
+/* Welcome text with gradient */
+#welcomeUser {
+    background: linear-gradient(90deg, #6366f1, #ec4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+/* ============ Pages Background ============ */
+#loginPage,
+#signupPage,
+#homePage {
+    background-color: #F8FAFC;
+}
+
+/* ============ Content Cards ============ */
+.login-content,
+.signup-content,
+.home-content {
+    background-color: #fff;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 32px;
+    border: 1px solid #e2e8f0;
+}
+
+/* ============ Headers ============ */
+.login-header h2,
+.signup-header h2 {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 48px;
+}
+.login-header p,
+.signup-header p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #64748b;
+}
+
+/* ============ Forms ============ */
+.form-floating > .form-control {
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    padding-top: 0.6rem;
+    padding-bottom: 0.4rem;
+    min-height: 3rem;     
+    height: 3rem; 
+    font-size: 0.9rem; 
+    transition: border-color 0.3s, box-shadow 0.3s;  
+}
+.form-floating > label {
+    padding: .7rem 0.75rem;
+    color: #64748b;
+}
+.form-floating > .form-control:focus ~ label {
+    color: #6366f1;
+}
+.form-floating > .form-control:focus {
+    box-shadow: none;
+    border-color: #6366f1;
+}
+
+/* ============ Buttons ============ */
+.btn-violet {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #6366f1;
+    --bs-btn-border-color: #6366f1;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #4F46E5;
+    --bs-btn-hover-border-color: #4F46E5;
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #4F46E5;
+    --bs-btn-active-border-color: #4F46E5;
+    transition: all .4s;
+    font-weight: 600;
+    font-size: 16px;
+}
+.btn-violet:active {
+    transform: translateY(4px);
+}
+
+/* ============ Links ============ */
+.signup-link p a,
+.signin-link p a {
+    text-decoration: none;
+    color: #6366f1;
+    transition: color .4s;
+    font-weight: 600;
+    line-height: 24px;
+    font-size: 14px;
+}
+.signup-link p a:hover,
+.signin-link p a:hover {
+    color: #4F46E5;
+}
+
+/* ============ modal =========== */
+.modal{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-footer{
+    justify-content: center;
+}
+
+/* ========= Validation ========= */
+.form-floating > .form-control.valid{
+    border-color: var(--bs-success) !important;
+}
+.form-floating > .form-control.invalid{
+    border-color: var(--bs-danger) !important;
+}
+.form-floating > .form-control.valid ~ label {
+    color: var(--bs-success);
+}
+.form-floating > .form-control.invalid ~ label {
+    color: var(--bs-danger);
+}
+.invalid-message{
+    color: var(--bs-danger);
+    font-size: 14px;
+    margin: 0;
+    text-align: start;
+}
