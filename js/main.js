@@ -90,8 +90,11 @@ if (document.getElementById('signinBtn')) {
             };
         currentUser = getUser(user);
 
-        if (currentUser == 1) {
+        if (currentUser == 2) {
             errorMessage.textContent = 'This email is not registered. Please sign up first.';
+            errorMessage.classList.replace('d-none', 'd-block');
+        }else if(currentUser == 1){
+            errorMessage.textContent = 'Email field cannot be empty';
             errorMessage.classList.replace('d-none', 'd-block');
         } else if(currentUser == -1) {
             errorMessage.textContent = 'Incorrect password. Please try again.';
@@ -137,10 +140,14 @@ if (document.getElementById('homePage')) {
 function getUser(user) {
     for (var i = 0; i < userList.length; i++) {
         if (userList[i].email == user.email) {
-            return userList[i].password == user.password ? userList[i] : -1;
+            return userList[i].password == user.password ? userList[i] : -1; // return user or invalid password
         }
     }
-    return 1;
+    if(user.email == ''){
+        return 1; //  Enter a user
+    }else{
+        return 2; //  user is already exist
+    }
 }
 
 function isUserExist(email) {
